@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Red circle -->
+  <circle cx="256" cy="256" r="256" fill="#FF4C4C"/>
+
+  <!-- 18+ text -->
+  <text x="50%" y="50%" text-anchor="middle" fill="#FFFFFF"
+        font-family="'SM Sans', 'Segoe UI', sans-serif"
+        font-size="180" font-weight="bold" dy=".35em">
+    18+
+  </text>
+</svg>
