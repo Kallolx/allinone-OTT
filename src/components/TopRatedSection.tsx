@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star } from "lucide-react"
 import { getTopRatedMovies, type MovieDetails } from "@/lib/tmdb"
-import { getRandomPlatformUrl } from "@/lib/platformUrls"
+import { getRandomMostPlayedUrl } from "@/lib/platformUrls"
 
 export function TopRatedSection() {
   const [movies, setMovies] = useState<MovieDetails[]>([])
@@ -38,7 +38,7 @@ export function TopRatedSection() {
           <Card 
             key={movie.id}
             className="group cursor-pointer hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card border-border overflow-hidden"
-            onClick={() => window.open(getRandomPlatformUrl(), '_blank')}
+            onClick={() => window.open(getRandomMostPlayedUrl(), '_blank')}
           >
             <CardContent className="p-0">
               <div className="relative">

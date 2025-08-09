@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getAllBanglaContent, type MovieDetails } from "@/lib/tmdb";
+import { getRandomOtherPlatformUrl } from "@/lib/platformUrls";
 
 export function MostPlayedSection() {
   const [movies, setMovies] = useState<MovieDetails[]>([]);
@@ -39,9 +40,8 @@ export function MostPlayedSection() {
             key={movie.id}
             className="group cursor-pointer hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card border-border overflow-hidden"
             onClick={() => {
-              // Open both Chorki and Bongo BD search in new tabs
-              const searchQuery = encodeURIComponent(movie.title);
-              window.open(`https://www.chorki.com/bn/movie/${searchQuery}`, "_blank");              
+              const randomUrl = getRandomOtherPlatformUrl();
+              window.open(randomUrl, "_blank");
             }}
           >
             <CardContent className="p-0">

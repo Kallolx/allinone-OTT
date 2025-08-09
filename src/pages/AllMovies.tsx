@@ -6,7 +6,7 @@ import {
   getIndianContent,
   type MovieDetails,
 } from "@/lib/tmdb";
-import { getRandomPlatformUrl } from "@/lib/platformUrls";
+import { getRandomOtherPlatformUrl } from "@/lib/platformUrls";
 import { Loader2 } from "lucide-react";
 
 interface MovieGridProps {
@@ -27,7 +27,7 @@ function MovieGrid({ movies, emptyMessage = "No content found" }: MovieGridProps
         <Card
           key={movie.id}
           className="group cursor-pointer hover:shadow-glow transition-all duration-300 hover:scale-105 bg-card border-border overflow-hidden"
-          onClick={() => window.open(getRandomPlatformUrl(), "_blank")}
+          onClick={() => window.open(getRandomOtherPlatformUrl(), "_blank")}
         >
           <CardContent className="p-0">
             <div className="relative">
